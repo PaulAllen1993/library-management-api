@@ -14,7 +14,7 @@ public class CheckAvailableImpl implements CheckAvailable {
     private BookRepository bookRepository;
 
     @Override
-    public List<Book> available(String isAvailable) {
-        return bookRepository.isAvailable();
+    public List<Book> getavailableBooks() {
+        return bookRepository.findbyIsAvailableTrue();
     }
 }
