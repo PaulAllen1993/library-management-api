@@ -12,39 +12,31 @@ import java.util.List;
 public class LibraryController {
 
     @Autowired
-    private AddBook addBook;
-    @Autowired
-    private RemoveBook removeBook;
-    @Autowired
-    private CheckoutBook checkoutBook;
-    @Autowired
-    private ReturnBook returnBook;
-    @Autowired
-    private CheckAvailable checkAvailable;
+    private BookService bookService;
 
     @PostMapping("/book")
     public Book addBook(@RequestBody Book book) throws Exception {
-        return addBook.add(book);
+        return bookService.addBook(book);
     }
 
     @DeleteMapping("/{isbn}")
     public void removeBook(@RequestBody String isbn) throws Exception {
-        removeBook.delete(isbn);
+        bookService.deleteBook(isbn);
     }
 
     @PutMapping("/{isbn}/checkout")
     public void checkoutBook(@RequestBody String isbn) throws Exception {
-        checkoutBook.checkout(isbn);
+        bookService.checkoutBook(isbn);
     }
 
     @PutMapping("/{isbn}/return")
     public void returnBook(@RequestBody String isbn) throws Exception {
-        returnBook.checkIn(isbn);
+        bookService.returnBook(isbn);
     }
 
     @GetMapping("/{books}/available")
     public List<Book> availableBooks(@RequestBody String isAvailable) throws Exception {
-        return checkAvailable.available(isAvailable);
+        return bookService.getAvailableBooks();
     }
 
 }

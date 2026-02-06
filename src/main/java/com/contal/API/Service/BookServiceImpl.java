@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -20,8 +19,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book addBook(Book book) throws DuplicateISBNException {
-        Optional<Book> existingBook = bookRepository.findById(book.getIsbn());
-        if (existingBook.isPresent()) {
+        if (bookRepository.findById(book.getIsbn()).isPresent()) {
             throw new DuplicateISBNException("Book with ISBN " + book.getIsbn() + " already exists");
         }
         book.setAvailable(true);
@@ -30,20 +28,17 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBook(String isbn) throws BookNotFoundException {
-        Optional<Book> book = bookRepository.findById(isbn);
-        if (!book.isPresent()) {
-            throw new BookNotFoundException("Book with ISBN " + isbn + " not found");
-        }
+        bookRepository.findById(isbn)
+                .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
         bookRepository.deleteById(isbn);
     }
 
     @Override
     public void checkoutBook(String isbn) throws BookNotFoundException, BookNotAvailableException {
-        Optional<Book> book = bookRepository.findById(isbn);
-        if (!book.isPresent()) {
-            throw new BookNotFoundException("Book with ISBN " + isbn + " not found");
-        }
-        if (!book.get().isAvailable()) {
+        Book book = bookRepository.findById(isbn)
+                .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
+
+        if (!book.isAvailable()) {
             throw new BookNotAvailableException("Book with ISBN " + isbn + " is not available");
         }
         bookRepository.checkoutBook(isbn);
@@ -51,11 +46,10 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void returnBook(String isbn) throws BookNotFoundException, BookAlreadyReturnedException {
-        Optional<Book> book = bookRepository.findById(isbn);
-        if (!book.isPresent()) {
-            throw new BookNotFoundException("Book with ISBN " + isbn + " not found");
-        }
-        if (book.get().isAvailable()) {
+        Book book = bookRepository.findById(isbn)
+                .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
+
+        if (book.isAvailable()) {
             throw new BookAlreadyReturnedException("Book with ISBN " + isbn + " is already available");
         }
         bookRepository.checkInBook(isbn);
