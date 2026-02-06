@@ -13,16 +13,16 @@ import java.util.List;
 @Repository
 public interface BookRepository extends JpaRepository<Book, String> {
 
-    @Query("SELECT b FROM Book WHERE b.isAvailable = true")
+    @Query("SELECT b FROM Book b WHERE b.isAvailable = true")
     List<Book> isAvailable();
 
     @Modifying
     @Transactional
-    @Query("UPDATE Book b SET b.isAvailable = false WHERE b.isbn = : isbn")
+    @Query("UPDATE Book b SET b.isAvailable = false WHERE b.isbn = :isbn")
     void checkoutBook(@Param("isbn") String isbn);
 
     @Modifying
     @Transactional
-    @Query("UPDATE Book b SET b.isAvailable = true WHERE b.isbn = : isbn")
+    @Query("UPDATE Book b SET b.isAvailable = true WHERE b.isbn = :isbn")
     void checkInBook(@Param("isbn") String isbn);
 }
