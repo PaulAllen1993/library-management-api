@@ -49,6 +49,7 @@ This project uses [release-it](https://github.com/release-it/release-it) for aut
 Releases are automatically created when you push to the `main` branch. The workflow uses the **Angular commit convention** to determine version bumps:
 
 #### Commit Message Format:
+
 ```
 type(scope): description
 
@@ -58,11 +59,13 @@ type(scope): description
 ```
 
 #### Version Increment Rules:
+
 - **`fix:` or `perf:`** → Patch version (e.g., `0.0.1` → `0.0.2`)
 - **`feat:`** → Minor version (e.g., `0.0.1` → `0.1.0`)
 - **`BREAKING CHANGE:`** → Major version (e.g., `0.0.1` → `1.0.0`)
 
 #### Examples:
+
 ```
 fix: resolve null pointer in checkout
 feat: add user authentication system
@@ -71,6 +74,7 @@ BREAKING CHANGE: remove deprecated endpoints
 ```
 
 The workflow:
+
 - Builds the release-it container
 - Analyzes commit messages since last release
 - Determines appropriate version bump
