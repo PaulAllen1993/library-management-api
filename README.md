@@ -35,6 +35,7 @@ type(scope): description
 ```
 
 **Required types:**
+
 - `feat:` - New features
 - `fix:` - Bug fixes
 - `docs:` - Documentation changes
@@ -44,6 +45,7 @@ type(scope): description
 - `chore:` - Maintenance tasks
 
 **Examples:**
+
 ```
 feat: add user authentication
 fix: resolve null pointer exception
@@ -52,6 +54,7 @@ chore: update dependencies
 ```
 
 **Invalid commits will be rejected** with an error message.
+
 - Code formatting (Spotless - if configured)
 
 #### Adding Pre-commit to PATH
