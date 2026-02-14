@@ -11,7 +11,10 @@
     "plugins": {
       "@release-it/conventional-changelog": {
         "infile": "CHANGELOG.md",
-        "preset": "angular"
+        "preset": "angular",
+        "writerOpts": {
+          "mainTemplate": "{{#if this.isPatch}}\n## {{this.version}} ({{this.date}})\n{{else}}\n# {{this.version}} ({{this.date}})\n{{/if}}\n\n{{#if this.compareLink}}[**Full Changelog**]({{this.compareLink}}){{/if}}\n\n{{#each this.commitGroups}}### {{this.title}}\n\n{{#each this.commits}}* {{#if this.scope}}**{{this.scope}}:** {{/if}}{{this.subject}} ([{{this.shortHash}}]({{this.commit.url}})){{#if this.files}} - Files: `{{#each this.files}}{{this}}{{#unless @last}}`, `{{/unless}}{{/each}}`{{/if}}\n{{/each}}\n{{/each}}\n"
+        }
       }
     },
     "git": {

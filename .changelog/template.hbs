@@ -1,0 +1,30 @@
+{{#if this.isPatch}}
+  {{#if this.date}}
+## {{this.version}} ({{this.date}})
+  {{else}}
+## {{this.version}}
+  {{/if}}
+{{else}}
+  {{#if this.date}}
+# {{this.version}} ({{this.date}})
+  {{else}}
+# {{this.version}}
+  {{/if}}
+{{/if}}
+
+{{~#if this.compareLink}}
+[**Full Changelog**]({{this.compareLink}})
+{{~/if}}
+
+{{~#each this.commitGroups}}
+### {{this.title}}
+
+{{~#each this.commits}}
+* {{#if this.scope}}**{{this.scope}}:** {{/if}}{{this.subject}} ([{{this.shortHash}}]({{this.commit.url}})){{#if this.closes}} - Closes {{#each this.closes}}[#{{this}}]({{../../repo.url}}/issues/{{this}}){{#unless @last}}, {{/unless}}{{/each}}{{/if}}{{#if this.files}} - Files: `{{#each this.files}}{{this}}{{#unless @last}}`, `{{/unless}}{{/each}}`{{/if}}
+  {{#if this.breaking}}
+
+  **BREAKING CHANGE**: {{this.breaking}}{{#if this.breakingUrl}} - See [{{this.breakingUrl}}]({{this.breakingUrl}}){{/if}}
+  {{/if}}
+{{/each}}
+
+{{/each}}
