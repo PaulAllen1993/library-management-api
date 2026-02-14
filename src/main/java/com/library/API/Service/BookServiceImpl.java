@@ -1,6 +1,7 @@
 package com.library.API.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import com.library.API.Exception.BookAlreadyReturnedException;
@@ -19,7 +20,7 @@ public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
 
     @Override
-    public Book addBook(Book book) throws DuplicateISBNException {
+    public Book addBook(@NonNull Book book) throws DuplicateISBNException {
         if (bookRepository.findById(book.getIsbn()).isPresent()) {
             throw new DuplicateISBNException("Book with ISBN " + book.getIsbn() + " already exists");
         }
@@ -28,14 +29,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void deleteBook(String isbn) throws BookNotFoundException {
+    public void deleteBook(@NonNull String isbn) throws BookNotFoundException {
         bookRepository.findById(isbn)
                 .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
         bookRepository.deleteById(isbn);
     }
 
     @Override
-    public void checkoutBook(String isbn) throws BookNotFoundException, BookNotAvailableException {
+    public void checkoutBook(@NonNull String isbn) throws BookNotFoundException, BookNotAvailableException {
         Book book = bookRepository.findById(isbn)
                 .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
 
@@ -46,7 +47,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void returnBook(String isbn) throws BookNotFoundException, BookAlreadyReturnedException {
+    public void returnBook(@NonNull String isbn) throws BookNotFoundException, BookAlreadyReturnedException {
         Book book = bookRepository.findById(isbn)
                 .orElseThrow(() -> new BookNotFoundException("Book with ISBN " + isbn + " not found"));
 
