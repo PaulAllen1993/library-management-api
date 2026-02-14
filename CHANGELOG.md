@@ -1,5 +1,13 @@
 # Changelog
 
+# 0.6.0 (2026-02-14)
+
+
+
+### Features
+
+* add feature test file to trigger release with enhanced changelog ([fbe149a]())
+
 # 0.5.0 (2026-02-14)
 
 
