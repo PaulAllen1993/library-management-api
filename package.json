@@ -1,7 +1,7 @@
 {
-  "name": "contal-library-api",
+  "name": "library-api",
   "version": "0.0.1",
-  "description": "Contal Library API",
+  "description": "Library API",
   "main": "index.js",
   "scripts": {
     "release": "release-it"
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PaulAllen1993/ContalLibraryAPI.git"
+    "url": "https://github.com/PaulAllen1993/library-management-api.git"
   },
   "author": "Paul Allen",
   "license": "ISC"

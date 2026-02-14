@@ -1,4 +1,4 @@
-# ContalLibraryAPI
+# Library Management API
 
 ## Development
 
@@ -16,6 +16,7 @@ pre-commit run              # Run on staged files only
 ```
 
 The hooks will automatically run on every `git commit` and check:
+
 - Trailing whitespace and end-of-file fixes
 - YAML syntax validation
 - Large file detection
@@ -34,6 +35,7 @@ pre-commit run              # Run on staged files only
 ```
 
 If you open a new terminal and `pre-commit` is not found, run:
+
 ```bash
 source ~/.zshrc
 ```
