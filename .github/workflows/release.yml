@@ -36,3 +36,6 @@ jobs:
         run: npx release-it --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enhance changelog with file information
+        run: npm run postrelease
