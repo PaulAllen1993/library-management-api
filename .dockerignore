@@ -1,0 +1,12 @@
+target/
+*.log
+*.tmp
+.git/
+.gitignore
+README.md
+HELP.md
+.github/
+mvnw
+mvnw.cmd
+.mvn/
+src/test/
