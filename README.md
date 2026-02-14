@@ -26,13 +26,17 @@ The hooks will automatically run on every `git commit` and check:
 
 #### Adding Pre-commit to PATH
 
-If `pre-commit` command is not found, add to your PATH:
+Pre-commit has been added to your PATH automatically. You can now use:
 
 ```bash
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+pre-commit run --all-files  # Run on all files
+pre-commit run              # Run on staged files only
 ```
 
-Or add this to your `~/.zshrc` or `~/.bash_profile`.
+If you open a new terminal and `pre-commit` is not found, run:
+```bash
+source ~/.zshrc
+```
 
 ## Releases
 
