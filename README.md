@@ -21,8 +21,37 @@ The hooks will automatically run on every `git commit` and check:
 - YAML syntax validation
 - Large file detection
 - Merge conflict markers
+- **Angular commit message format validation**
+- **Secrets/passwords detection**
 - Maven compilation
 - Maven tests
+
+#### Commit Message Requirements
+
+All commits **must** follow the Angular commit convention:
+
+```
+type(scope): description
+```
+
+**Required types:**
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation changes
+- `style:` - Code style changes
+- `refactor:` - Code refactoring
+- `test:` - Testing changes
+- `chore:` - Maintenance tasks
+
+**Examples:**
+```
+feat: add user authentication
+fix: resolve null pointer exception
+docs: update API documentation
+chore: update dependencies
+```
+
+**Invalid commits will be rejected** with an error message.
 - Code formatting (Spotless - if configured)
 
 #### Adding Pre-commit to PATH
