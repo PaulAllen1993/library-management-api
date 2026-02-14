@@ -1,0 +1,30 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.0] - 2026-02-14
+
+### Features
+
+- Add change log generation support with release-it ([761a9d0](https://github.com/PaulAllen1993/library-management-api/commit/761a9d0))
+- Modify package names to reflect library-management-api repository ([f307a92](https://github.com/PaulAllen1993/library-management-api/commit/f307a92))
+
+## [0.0.1] - 2026-02-14
+
+### Features
+
+- Enforce Angular commit convention and secrets detection with pre-commit hooks
+- Configure release-it with Angular commit convention for automated versioning
+- Add pre-commit hooks for code quality and security validation
+- Add automated release workflow with GitHub Actions
+- Java 21 upgrade with Spring Boot 3.5.5 modernization
+- Refactor services into BookServiceImpl with singleton pattern
+- Fix JPA query syntax errors for Java 21 compatibility
+
+### Documentation
+
+- Update README with Angular commit message format and examples
+- Update repository references for rename to library-management-api
