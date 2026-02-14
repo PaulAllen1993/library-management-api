@@ -1,5 +1,13 @@
 # Changelog
 
+# 0.7.0 (2026-02-14)
+
+
+
+### Features
+
+* test release workflow with enhanced changelog ([59ede63]())
+
 ## 0.6.1 (2026-02-14)
 
 # 0.6.0 (2026-02-14)
