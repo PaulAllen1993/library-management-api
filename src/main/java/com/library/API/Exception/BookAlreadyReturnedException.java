@@ -1,4 +1,4 @@
-package com.contal.API.Exception;
+package com.library.API.Exception;
 
 public class BookAlreadyReturnedException extends Exception {
     public BookAlreadyReturnedException(String message) {
