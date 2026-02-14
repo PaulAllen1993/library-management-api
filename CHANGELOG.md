@@ -1,5 +1,13 @@
 # Changelog
 
+# 0.5.0 (2026-02-14)
+
+
+
+### Features
+
+* add test file 4 and config with multiple file changes ([db867f5]())
+
 ## 0.4.3 (2026-02-14)
 
 ## [0.4.2](https://github.com/PaulAllen1993/library-management-api/compare/v0.4.1...v0.4.2) (2026-02-14)
