@@ -1,0 +1,30 @@
+{
+  "name": "library-api",
+  "version": "0.0.1",
+  "description": "Library API",
+  "main": "index.js",
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "preset": "angular",
+    "git": {
+      "commitMessage": "chore: release v${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true,
+      "releaseName": "Release v${version}",
+      "releaseNotes": "auto-generate"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaulAllen1993/library-management-api.git"
+  },
+  "author": "Paul Allen",
+  "license": "ISC"
+}

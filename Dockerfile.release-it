@@ -1,0 +1,13 @@
+FROM node:18-alpine
+
+# Install release-it globally
+RUN npm install -g release-it
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json if it exists (for configuration)
+COPY package*.json ./
+
+# Default command
+CMD ["release-it"]
