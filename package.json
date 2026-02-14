@@ -4,7 +4,8 @@
   "description": "Library API",
   "main": "index.js",
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "postrelease": "node scripts/enhance-changelog.js"
   },
   "release-it": {
     "preset": "angular",
