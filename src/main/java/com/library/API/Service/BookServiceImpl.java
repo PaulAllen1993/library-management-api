@@ -1,13 +1,14 @@
-package com.contal.API.Service;
+package com.library.API.Service;
 
-import com.contal.API.Exception.BookAlreadyReturnedException;
-import com.contal.API.Exception.BookNotAvailableException;
-import com.contal.API.Exception.BookNotFoundException;
-import com.contal.API.Exception.DuplicateISBNException;
-import com.contal.API.Model.Book;
-import com.contal.API.Repo.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.library.API.Exception.BookAlreadyReturnedException;
+import com.library.API.Exception.BookNotAvailableException;
+import com.library.API.Exception.BookNotFoundException;
+import com.library.API.Exception.DuplicateISBNException;
+import com.library.API.Model.Book;
+import com.library.API.Repo.BookRepository;
 
 import java.util.List;
 

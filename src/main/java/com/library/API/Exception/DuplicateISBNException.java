@@ -1,4 +1,4 @@
-package com.contal.API.Exception;
+package com.library.API.Exception;
 
 public class DuplicateISBNException extends Exception {
     public DuplicateISBNException(String message) {

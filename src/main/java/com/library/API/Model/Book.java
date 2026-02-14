@@ -1,4 +1,4 @@
-package com.contal.API.Model;
+package com.library.API.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

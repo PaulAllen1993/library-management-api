@@ -1,8 +1,8 @@
-package com.contal.API.Service;
-
-import com.contal.API.Model.Book;
+package com.library.API.Service;
 
 import java.util.List;
+
+import com.library.API.Model.Book;
 
 public interface BookService {
     Book addBook(Book book) throws Exception;
