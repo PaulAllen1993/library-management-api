@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.4.0](https://github.com/PaulAllen1993/library-management-api/compare/v0.3.0...v0.4.0) (2026-02-14)
+
+
+### Features
+
+* add test file 3 to test improved release workflow ([400c445](https://github.com/PaulAllen1993/library-management-api/commit/400c4458a6dcb2597b6e8b96693fef9a71d93f57))
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -8,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.3.0] - 2026-02-14
 
 ### Features
+
 - Add test file 2 to repository ([44b368b](https://github.com/PaulAllen1993/library-management-api/commit/44b368b))
 
 ## [0.2.0] - 2026-02-14
