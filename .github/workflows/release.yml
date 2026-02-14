@@ -27,8 +27,9 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git fetch --all --tags
 
       - name: Run release-it
-        run: npx release-it --ci
+        run: npx release-it --ci --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
