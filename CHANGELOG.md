@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.4.2](https://github.com/PaulAllen1993/library-management-api/compare/v0.4.1...v0.4.2) (2026-02-14)
+
 ## [0.4.1](https://github.com/PaulAllen1993/library-management-api/compare/v0.4.0...v0.4.1) (2026-02-14)
 
 # [0.4.0](https://github.com/PaulAllen1993/library-management-api/compare/v0.3.0...v0.4.0) (2026-02-14)
