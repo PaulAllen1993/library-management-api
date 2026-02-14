@@ -46,10 +46,34 @@ This project uses [release-it](https://github.com/release-it/release-it) for aut
 
 ### Automatic Releases (GitHub Actions)
 
-Releases are automatically created when you push to the `main` branch. The workflow:
+Releases are automatically created when you push to the `main` branch. The workflow uses the **Angular commit convention** to determine version bumps:
 
+#### Commit Message Format:
+```
+type(scope): description
+
+[optional body]
+
+[optional footer]
+```
+
+#### Version Increment Rules:
+- **`fix:` or `perf:`** → Patch version (e.g., `0.0.1` → `0.0.2`)
+- **`feat:`** → Minor version (e.g., `0.0.1` → `0.1.0`)
+- **`BREAKING CHANGE:`** → Major version (e.g., `0.0.1` → `1.0.0`)
+
+#### Examples:
+```
+fix: resolve null pointer in checkout
+feat: add user authentication system
+feat: implement book search API
+BREAKING CHANGE: remove deprecated endpoints
+```
+
+The workflow:
 - Builds the release-it container
-- Runs release-it with `--ci` flag
+- Analyzes commit messages since last release
+- Determines appropriate version bump
 - Creates a GitHub release with changelog
 - Pushes version tags
 
