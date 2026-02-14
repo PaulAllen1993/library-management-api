@@ -10,7 +10,10 @@
     "preset": "angular",
     "git": {
       "commitMessage": "chore: release v${version}",
-      "tagName": "v${version}"
+      "tagName": "v${version}",
+      "requireCleanWorkingDir": false,
+      "push": true,
+      "pushArgs": "--follow-tags"
     },
     "npm": {
       "publish": false
@@ -20,7 +23,9 @@
       "releaseName": "Release v${version}",
       "releaseNotes": "auto-generate"
     },
-    "changelog": true
+    "changelog": {
+      "file": "CHANGELOG.md"
+    }
   },
   "repository": {
     "type": "git",
