@@ -1,6 +1,6 @@
 {
   "name": "library-api",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Library API",
   "main": "index.js",
   "scripts": {
