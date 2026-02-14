@@ -8,12 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2026-02-14
 
 ### Features
+
 - Add change log generation support with release-it ([761a9d0](https://github.com/PaulAllen1993/library-management-api/commit/761a9d0))
 - Modify package names to reflect library-management-api repository ([f307a92](https://github.com/PaulAllen1993/library-management-api/commit/f307a92))
 
 ## [0.0.1] - 2026-02-14
 
 ### Features
+
 - Enforce Angular commit convention and secrets detection with pre-commit hooks
 - Configure release-it with Angular commit convention for automated versioning
 - Add pre-commit hooks for code quality and security validation
@@ -23,5 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix JPA query syntax errors for Java 21 compatibility
 
 ### Documentation
+
 - Update README with Angular commit message format and examples
 - Update repository references for rename to library-management-api
