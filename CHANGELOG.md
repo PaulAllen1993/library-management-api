@@ -8,13 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.0] - 2026-02-14
 
 ### Features
+
 - Add test file to repository ([aeb017f](https://github.com/PaulAllen1993/library-management-api/commit/aeb017f))
 - Add another test to debug release workflow ([9c8c8ca](https://github.com/PaulAllen1993/library-management-api/commit/9c8c8ca))
 
 ### Fixes
+
 - Add non-null annotations for type safety ([79ca38c](https://github.com/PaulAllen1993/library-management-api/commit/79ca38c))
 
 ### Changes
+
 - Simplify release workflow to use npx instead of Docker ([01eae44](https://github.com/PaulAllen1993/library-management-api/commit/01eae44))
 - Add explicit git fetch --tags and verbose release-it logging ([e08f3a1](https://github.com/PaulAllen1993/library-management-api/commit/e08f3a1))
 
