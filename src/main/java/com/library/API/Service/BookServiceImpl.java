@@ -19,6 +19,10 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
     @Override
     public Book addBook(@NonNull Book book) throws DuplicateISBNException {
         if (bookRepository.findById(book.getIsbn()).isPresent()) {
