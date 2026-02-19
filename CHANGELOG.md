@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.3 (2026-02-19)
+
+
+
+### Bug Fixes
+
+* update dependency ([af3485f]())
+
 ## 0.7.2 (2026-02-19)
 
 
