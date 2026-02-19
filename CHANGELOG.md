@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.2 (2026-02-19)
+
+
+
+### Bug Fixes
+
+* modify constructors ([c835015]())
+
 ## 0.7.1 (2026-02-14)
 
 
